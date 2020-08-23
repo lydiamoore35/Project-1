@@ -32,4 +32,9 @@
     display: block;
     align-items: flex-start;
     justify-content: flex-start;
+    display: inline-block;   
+}
+#submit:hover {
+    background-color: cornflowerblue;
+    color: white;
 }
