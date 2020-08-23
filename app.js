@@ -13,7 +13,7 @@ $('#submit').on('click' , (event) => {
         (data)=>{
             //console.log(data);
             for(let i = 1; i <= 45; i+=9){
-                $('<div>').text(`${data.list[i].dt_txt} Today's temp is ${data.list[i].main.temp}`).appendTo('.weekDay');
+                $('<div>').css('background-color', 'black').css('padding','10px').text(`${data.list[i].dt_txt} Today's temp is ${data.list[i].main.temp}`).appendTo('.weekDay');
             } 
             
             

@@ -1,6 +1,35 @@
 
 .body {
-    background-image: url('https://image.freepik.com/free-vector/kids-summer-camp-cartoons_18591-52902.jpg');
+    background-image: url('https://i.pinimg.com/originals/19/7a/5e/197a5efb83dbb3bdc05fe76ad9e77b3d.jpg');
+    font-family: 'Rancho', cursive;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+}   
+
+.appName {
+    align-items: center;
+    font-size: x-large;
+    background-color: black;
+    opacity: .7;
+    color: white;
+    margin-top: -35px;
+    padding-left: 15px;
+
+
+}    
+.weekDay {
+    color: white;
+    opacity: .7;
+
+}
+#submit {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: medium;
+    display: block;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
