@@ -2,39 +2,42 @@
 .body {
     background-image: url('https://i.pinimg.com/originals/19/7a/5e/197a5efb83dbb3bdc05fe76ad9e77b3d.jpg');
     font-family: 'Rancho', cursive;
-    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-direction: column;
 }   
-
 .appName {
     align-items: center;
-    font-size: x-large;
+    font-size: xx-large;
     background-color: black;
     opacity: .7;
     color: white;
-    margin-top: -35px;
+    margin-top: -50px;
     padding-left: 15px;
-
-
 }    
 .weekDay {
     color: white;
     opacity: .7;
-
+    font-size: x-large;
 }
-#submit {
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: medium;
-    display: block;
-    align-items: flex-start;
-    justify-content: flex-start;
-    display: inline-block;   
-}
-#submit:hover {
-    background-color: cornflowerblue;
+.submit {
+    border-radius: 7px;
+    border-width: 2px;
     color: white;
+    border-color: white;
+    background-color: black;
+    padding: 15px;
+    font-size: x-large;
+    display: inline-block;
+    margin: 10px;
+}
+.submit:hover {
+    background-image: linear-gradient(black,white);
+    color: white;
+}
+.input {
+    padding: 10px;
+}
+.form {
+    padding: 0px 0px 10px 740px;
+    margin-bottom: 10px;
 }
