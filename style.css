@@ -4,6 +4,9 @@
     font-family: 'Rancho', cursive;
     background-size: cover;
     display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+
 }   
 .appName {
     align-items: center;
@@ -13,7 +16,14 @@
     color: white;
     margin-top: -50px;
     padding-left: 15px;
-}    
+    justify-content: space-around;
+}  
+h1 {
+    margin-bottom: -70px;
+} 
+.form {
+    margin-left: 750px;
+} 
 .weekDay {
     color: white;
     opacity: .7;
@@ -27,17 +37,15 @@
     background-color: black;
     padding: 15px;
     font-size: x-large;
-    display: inline-block;
+    display: block;
     margin: 10px;
 }
 .submit:hover {
-    background-image: linear-gradient(black,white);
-    color: white;
+    background-image: linear-gradient(red,orange,yellow,green,blue,purple);
+    color:black;
+    cursor: pointer;
+    font-weight: bold;
 }
 .input {
     padding: 10px;
-}
-.form {
-    padding: 0px 0px 10px 740px;
-    margin-bottom: 10px;
 }

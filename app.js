@@ -1,6 +1,6 @@
 //console.log('js attached and loaded');
 
-$('#submit').on('click' , (event) => {
+$('.submit').on('click' , (event) => {
     event.preventDefault();
     const zipCode = $('input').val();
     console.log(zipCode);
@@ -13,10 +13,8 @@ $('#submit').on('click' , (event) => {
         (data)=>{
             //console.log(data);
             for(let i = 1; i <= 45; i+=9){
-                $('<div>').css('background-color', 'black').css('padding','20px').text(`${data.list[i].dt_txt} Today's temp is ${data.list[i].main.temp}`).appendTo('.weekDay');
-            } 
-            
-            
+                $('<div>').css('background-color', 'black').css('padding','20px').css('margin-top','40px').text(`${data.list[i].dt_txt} Today's temp is ${data.list[i].main.temp}`).appendTo('.weekDay');
+            }     
         },
         ()=>{
             console.log('bad request');
