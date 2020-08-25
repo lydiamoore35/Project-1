@@ -11,13 +11,13 @@ $('.submit').on('click' , (event) => {
     
     promise.then(
         (data)=>{
-            //console.log(data);
-            for(let i = 1; i <= 45; i+=9){
-                $('<div>').css('background-color', 'black').css('padding','20px').css('margin-top','40px').text(`${data.list[i].dt_txt} Today's temp is ${data.list[i].main.temp}`).appendTo('.weekDay');
-            }     
-        },
+            console.log(data);
+            const temp = Math.floor(eval(data.list[0].main.temp*9/5-459.67));
+            //for(let i = 1; i <= 45; i+=9){
+                $('<div>').css('background-color', 'black').css('padding','20px').css('margin-top','40px').text(`${data.list[0].dt_txt} Today's temp is ${temp}º`).appendTo('.weekDay');
+            //}     
+        }),
         ()=>{
             console.log('bad request');
         }
-    );
-})
+});

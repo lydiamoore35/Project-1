@@ -1,11 +1,13 @@
 
-.body {
+body {
     background-image: url('https://i.pinimg.com/originals/19/7a/5e/197a5efb83dbb3bdc05fe76ad9e77b3d.jpg');
     font-family: 'Rancho', cursive;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
+    width: 100%;
     background-repeat: no-repeat;
+    align-content: center;
 
 }   
 .appName {
