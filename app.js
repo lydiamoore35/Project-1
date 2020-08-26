@@ -12,17 +12,27 @@ $('.submit').on('click' , (event) => {
     promise.then(
         (data)=>{
             console.log(data);
-            const fahrenheit = Math.floor(eval(data.list[0].main.temp*9/5-459.67));
-            //for(let i = 1; i <= 45; i+=9){
-                $('.weekDay').text(`${data.list[0].dt_txt} Today's temp is ${fahrenheit}º`);
-                    if(fahrenheit > 70){
+            let fahrenheit
+            for(let i = 1; i <= 45; i+=9){
+                fahrenheit = Math.floor(eval(data.list[i].main.temp*9/5-459.67));
+                // let date = data.list[0].dt_txt
+                // let asd = date.toString();
+                // console.log(asd);
+                // console.log(date);
+                // date.substring(0, 5);
+                // console.log(date);
+                $('.weekDay').text(`${data.list[i].dt_txt} Today's temp is ${fahrenheit}ºF`);
+                    if(fahrenheit >= 70){
                     $('.hotGames').css('display' , 'inline').appendTo($('.weekDay'));
                     }
-            //}     
+                    else{
+                        $('.coldGames').css('display' , 'inline').appendTo($('.weekDay'));
+                    }
+            }     
         }),
-        ()=>{
-            console.log('bad request');
-        }
+            ()=>{
+                console.log('bad request');
+            }
 });
 
 //hotGames
@@ -31,4 +41,8 @@ $('.submit').on('click' , (event) => {
 //coldGames
 {/* <a href="https://kidactivities.net/winter-time-inside-games/" */}
 
-
+//i need to push the date to an array and then split the array 
+//shift or unshift the first 5 elements and then join
+//slice off a part of the array we don't want 
+//day 1 day 2 day 3 
+//code block index and app.jss code cblick last icon on slack 

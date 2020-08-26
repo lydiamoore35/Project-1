@@ -57,7 +57,7 @@ h1 {
 .input {
     padding: 10px;
 }
-.hotGames {
+.hotGames, .coldGames{
     display: none;
     color: white;
     background-color: black;
