@@ -3,8 +3,8 @@ body {
     background-image: url('https://i.pinimg.com/originals/19/7a/5e/197a5efb83dbb3bdc05fe76ad9e77b3d.jpg');
     font-family: 'Rancho', cursive;
     background-size: cover;
-    /*display: flex;
-    flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background-repeat: no-repeat;
     align-content: center;
@@ -12,7 +12,7 @@ body {
 }   
 .appName {
     align-items: center;
-    font-size: xx-large;
+    font-size: 30px;
     background-color: black;
     opacity: .7;
     color: white;
@@ -27,9 +27,14 @@ h1 {
     margin-left: 750px;
 } 
 .weekDay {
+    display: none;
     color: white;
+    background-color: black;
     opacity: .7;
-    font-size: x-large;
+    font-size: 30px;
+    display: inline;
+    margin: 10px;
+    justify-content: center;/*why doesn't this work*/
 }
 .submit {
     border-radius: 7px;
@@ -38,9 +43,10 @@ h1 {
     border-color: white;
     background-color: black;
     padding: 15px;
-    font-size: x-large;
+    font-size: 20px;
     display: block;
     margin: 10px;
+
 }
 .submit:hover {
     background-image: linear-gradient(red,orange,yellow,green,blue,purple);
@@ -50,4 +56,9 @@ h1 {
 }
 .input {
     padding: 10px;
+}
+.hotGames {
+    display: none;
+    color: white;
+    background-color: black;
 }
