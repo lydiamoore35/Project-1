@@ -11,30 +11,66 @@ body {
 
 }   
 .appName {
+    display: flex;
     align-items: center;
+    flex-wrap: wrap;
     font-size: 30px;
     background-color: black;
     opacity: .7;
     color: white;
-    margin-top: -50px;
-    padding-left: 15px;
+    margin-top: 0px;
+    margin-left: -2%;
+    padding-right: 5%;
+    width: 100%;
     justify-content: space-around;
 }  
-h1 {
-    margin-bottom: -70px;
-} 
 .form {
-    margin-left: 750px;
+    display: flex;
+    justify-content: flex-end;
 } 
-.weekDay {
+.day1, .day2, .day3, .day4, .day5 {
     display: none;
     color: white;
     background-color: black;
     opacity: .7;
     font-size: 30px;
-    display: inline;
     margin: 10px;
     justify-content: center;/*why doesn't this work*/
+    margin-bottom: 20px;
+    list-style: none;
+}
+nav {
+    /* display: flex;
+    justify-content: space-evenly;
+    z-index: 9999;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 5px;*/ 
+    margin-left: -3.5%;
+    overflow: hidden;
+    background-color:black;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 5px;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 9999;
+}
+.goToDay {
+    text-decoration: none;
+    color: white;
+}
+.goToDay:hover{
+    background-image: linear-gradient(red,orange,yellow,green,blue,purple);
+    color: black;
+    border: 1px solid white;
 }
 .submit {
     border-radius: 7px;
@@ -61,4 +97,16 @@ h1 {
     display: none;
     color: white;
     background-color: black;
+}
+ li {
+    margin: 10px;
+    border: white dotted 2px;
+    padding: 10px;
+} 
+li:hover {
+    background-image: linear-gradient(red,orange,yellow,green,blue,purple);
+    color: rgba(0,0,0,2);
+}
+a {
+    text-decoration: none;
 }

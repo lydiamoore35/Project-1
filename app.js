@@ -8,32 +8,76 @@ $('.submit').on('click' , (event) => {
     const promise = $.ajax({
         url:`http://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&appid=e93b94d22c396d0199209e2c2b28fd6a`,
     });
-    
+
+    let dateArr = [];
+    let hotGames = ['game1', 'game2'];
+    let coldGames = ['game1', 'game2'];
+
     promise.then(
         (data)=>{
             console.log(data);
             let fahrenheit
-            for(let i = 1; i <= 45; i+=9){
-                fahrenheit = Math.floor(eval(data.list[i].main.temp*9/5-459.67));
-                // let date = data.list[0].dt_txt
-                // let asd = date.toString();
-                // console.log(asd);
+            let feelsLike
+            //for(let i = 1; i <= 45; i+=9){
+                fahrenheit = Math.floor(eval(data.list[0].main.temp*9/5-459.67));
+                let date = data.list[0].dt_txt;
+                feelsLike = Math.floor(eval(data.list[0].main.feels_like*9/5-459.67));
+                //dateArr.push(date);
+                //console.log(dateArr);
+                //let dateString = date.toString('');
+                //console.log(dateString);
                 // console.log(date);
                 // date.substring(0, 5);
                 // console.log(date);
-                $('.weekDay').text(`${data.list[i].dt_txt} Today's temp is ${fahrenheit}ºF`);
+                $('.day1').css('display' , 'inline');
+                $('<div>').text(`The temperature feels like ${feelsLike}ºF`).prependTo('.day1');
+                $('<div>').text(`${data.list[0].dt_txt} Today's temperature is ${fahrenheit}ºF`).prependTo($('.day1'));
                     if(fahrenheit >= 70){
-                    $('.hotGames').css('display' , 'inline').appendTo($('.weekDay'));
+                        //for(let i = 0; i <= hotGames.length; i++)
+                        //$('<li>').appendTo($('<'))
+                    $('#hotGames1').css('display' , 'inline');
                     }
                     else{
-                        $('.coldGames').css('display' , 'inline').appendTo($('.weekDay'));
+                        $('#coldGames1').css('display' , 'inline');
                     }
-            }     
-        }),
+            
+                let fahrenheit2 
+                let feelsLike2
+                fahrenheit2 = Math.floor(eval(data.list[9].main.temp*9/5-459.67));
+                date = data.list[9].dt_txt;
+                feelsLike2 = Math.floor(eval(data.list[9].main.feels_like*9/5-459.67));
+                $('.day2').css('display' , 'inline');
+                $('<div>').text(`The temperature feels like ${feelsLike2}ºF`).prependTo('.day2');
+                $('<div>').text(`${data.list[9].dt_txt} Today's temperature is ${fahrenheit2}ºF`).prependTo($('.day2'));
+                    if(fahrenheit2 >= 70){
+                    $('#hotGames2').css('display' , 'inline');
+                    }
+                    else{
+                        $('#coldGames2').css('display' , 'inline');
+                    }
+
+                let fahrenheit3 
+                let feelsLike3
+                fahrenheit3 = Math.floor(eval(data.list[18].main.temp*9/5-459.67));
+                date = data.list[18].dt_txt;
+                feelsLike3 = Math.floor(eval(data.list[18].main.feels_like*9/5-459.67));
+                $('.day3').css('display' , 'inline');
+                $('<div>').text(`The temperature feels like ${feelsLike3}ºF`).prependTo('.day3');
+                $('<div>').text(`${data.list[18].dt_txt} Today's temperature is ${fahrenheit3}ºF`).prependTo($('.day3'));
+                    if(fahrenheit3 >= 70){
+                    $('#hotGames3').css('display' , 'inline');
+                    }
+                    else{
+                        $('#coldGames3').css('display' , 'inline');
+                    }
+
+
+                }),
             ()=>{
                 console.log('bad request');
             }
-});
+        });
+
 
 //hotGames
 //<a href="https://www.parents.com/fun/activities/outdoor/great-outdoor-games/?slide=slide_93e4a86f-40fc-4527-9c18-5c0db32c870f#slide_93e4a86f-40fc-4527-9c18-5c0db32c870f"game link
