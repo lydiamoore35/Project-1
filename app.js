@@ -21,6 +21,12 @@ $('.submit').on('click' , (event) => {
             //for(let i = 1; i <= 45; i+=9){
                 fahrenheit = Math.floor(eval(data.list[0].main.temp*9/5-459.67));
                 let date = data.list[0].dt_txt;
+                // console.log(typeofdate);
+                // console.log(date);
+                // let newDate = date.substring(5, date.length -9);
+                // console.log(newDate);
+                // console.log((newDate = `${newDate}-${newDate().getFullYear()}`));
+                //     $('.day1').text(`${data.list[0].dt_txt} Today's temperature is ${fahrenheit}ºF`);
                 feelsLike = Math.floor(eval(data.list[0].main.feels_like*9/5-459.67));
                 //dateArr.push(date);
                 //console.log(dateArr);
@@ -71,7 +77,36 @@ $('.submit').on('click' , (event) => {
                         $('#coldGames3').css('display' , 'inline');
                     }
 
+                let fahrenheit4 
+                let feelsLike4
+                fahrenheit4 = Math.floor(eval(data.list[27].main.temp*9/5-459.67));
+                date = data.list[27].dt_txt;
+                feelsLike4 = Math.floor(eval(data.list[27].main.feels_like*9/5-459.67));
+                $('.day4').css('display' , 'inline');
+                $('<div>').text(`The temperature feels like ${feelsLike4}ºF`).prependTo('.day4');
+                $('<div>').text(`${data.list[27].dt_txt} Today's temperature is ${fahrenheit4}ºF`).prependTo($('.day4'));
+                    if(fahrenheit4 >= 70){
+                    $('#hotGames4').css('display' , 'inline');
+                    }
+                    else{
+                        $('#coldGames4').css('display' , 'inline');
+                    }
 
+                let fahrenheit5 
+                let feelsLike5
+                fahrenheit5 = Math.floor(eval(data.list[36].main.temp*9/5-459.67));
+                date = data.list[36].dt_txt;
+                feelsLike5 = Math.floor(eval(data.list[36].main.feels_like*9/5-459.67));
+                $('.day5').css('display' , 'inline');
+                $('<div>').text(`The temperature feels like ${feelsLike5}ºF`).prependTo('.day5');
+                $('<div>').text(`${data.list[36].dt_txt} Today's temperature is ${fahrenheit5}ºF`).prependTo($('.day5'));
+                    if(fahrenheit5 >= 70){
+                    $('#hotGames5').css('display' , 'inline');
+                    }
+                    else{
+                        $('#coldGames5').css('display' , 'inline');
+                    }
+                    
                 }),
             ()=>{
                 console.log('bad request');

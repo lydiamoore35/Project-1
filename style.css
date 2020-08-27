@@ -106,6 +106,7 @@ nav {
 li:hover {
     background-image: linear-gradient(red,orange,yellow,green,blue,purple);
     color: rgba(0,0,0,2);
+    list-style: none;
 }
 a {
     text-decoration: none;
