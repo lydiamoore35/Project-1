@@ -10,8 +10,8 @@ $('.submit').on('click' , (event) => {
     });
 
     let dateArr = [];
-    let hotGames = ['game1', 'game2'];
-    let coldGames = ['game1', 'game2'];
+    // let hotGames = ['game1', 'game2'];
+    // let coldGames = ['game1', 'game2'];
 
     promise.then(
         (data)=>{
@@ -21,11 +21,10 @@ $('.submit').on('click' , (event) => {
             //for(let i = 1; i <= 45; i+=9){
                 fahrenheit = Math.floor(eval(data.list[0].main.temp*9/5-459.67));
                 let date = data.list[0].dt_txt;
-                //console.log(typeofdate);
                 console.log(date);
                 let newDate = date.substring(5, date.length -9);
                 console.log(newDate);
-                console.log((newDate = `${newDate} - ${new Date().getFullYear()}`));
+                console.log((newDate =`${newDate} - ${new Date().getFullYear()}`));
                     $('.day1').text(`${data.list[0].dt_txt} Today's temperature is ${fahrenheit}ºF`);
                     feelsLike = Math.floor(eval(data.list[0].main.feels_like*9/5-459.67));
                         $('.day1').css('display' , 'inline');
