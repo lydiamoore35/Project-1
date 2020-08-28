@@ -125,12 +125,7 @@ $('.submit').on('click' , (event) => {
             }
 });
 
-
-//hotGames
-//<a href="https://www.parents.com/fun/activities/outdoor/great-outdoor-games/?slide=slide_93e4a86f-40fc-4527-9c18-5c0db32c870f#slide_93e4a86f-40fc-4527-9c18-5c0db32c870f"game link
-
-//coldGames
-{/* <a href="https://kidactivities.net/winter-time-inside-games/" */}
+/////////Pseudo coding//////////
 
 //i need to push the date to an array and then split the array 
 //shift or unshift the first 5 elements and then join
