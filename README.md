@@ -1,10 +1,12 @@
 # Project-1
-WeatherWize is an application that generates games and activities based on the weather for a given day of the week.
+
+Lydia Moore's [WeatherWize] (https://lydiamoore35.github.io/Project-1/)
+
+## WeatherWize: 
+
+An application that generates games and activities based on the next five days weather forcast. You can click on each activitiy, that will load further intruction for that specific game.
 
 ## hello world
 
-### hello world
 
-welcome to my readme
-live link
 
