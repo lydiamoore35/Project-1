@@ -1,6 +1,11 @@
 //console.log('js attached and loaded');
 
+let enlargeDiv = () => {
+    $('.day1').css('margin' ,'1.5% 5%');
+}
+
 $('.submit').on('click' , (event) => {
+    enlargeDiv();
     event.preventDefault();
     const zipCode = $('input').val();
     console.log(zipCode);
@@ -24,12 +29,11 @@ $('.submit').on('click' , (event) => {
                 console.log(date);
                 let newDate = date.substring(5, date.length -9);
                 console.log(newDate);
-                console.log((newDate =`${newDate} - ${new Date().getFullYear()}`));
-                    $('.day1').text(`${data.list[0].dt_txt} Today's temperature is ${fahrenheit}ºF`);
+                console.log((newDate =`${newDate}-${new Date().getFullYear()}`));
                     feelsLike = Math.floor(eval(data.list[0].main.feels_like*9/5-459.67));
                         $('.day1').css('display' , 'inline');
                         $('<div>').text(`The temperature feels like ${feelsLike}ºF`).prependTo('.day1');
-                        $('<div>').text(`${data.list[0].dt_txt} Today's temperature is ${fahrenheit}ºF`).prependTo($('.day1'));
+                        $('<div>').text(`${newDate} Today's temperature is ${fahrenheit}ºF`).prependTo($('.day1'));
                             if(fahrenheit >= 70){
                                 //for(let i = 0; i <= hotGames.length; i++)
                                 //$('<li>').appendTo($('<'))
