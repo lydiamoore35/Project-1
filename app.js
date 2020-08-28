@@ -1,4 +1,5 @@
 ////// PROJECT 1 WEATHERWIZE //////
+(()=> {
 
 let enlargeDiv = () => {
     $('.day1').css('margin' ,'5% 5%');
@@ -121,7 +122,7 @@ $('.submit').on('click' , (event) => {
                 console.log('bad request');
             }
 });
-
+});
 /////////Pseudo coding//////////
 
 //i need to push the date to an array and then split the array 
