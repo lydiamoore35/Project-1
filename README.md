@@ -19,6 +19,7 @@ An application that generates games and activities based on the next five days w
 - create if else statements based on weather range
     - for each of the 5 days
         - originally going to be a loop but due to the way the API is structured including hourly forcast, this made things tricky when using a loop
+- create the nav bar
 ### Unsolved Problems
 - Not so much a problem, but a goal would be to make this DRY
 ### Improvements For Later

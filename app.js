@@ -7,7 +7,6 @@ let enlargeDiv = () => {
     $('.day4').css('margin' ,'1.5% 5%');
     $('.day5').css('margin' ,'1.5% 5%');
 }
-
 $('.submit').on('click' , (event) => {
     enlargeDiv();
     event.preventDefault();
@@ -17,8 +16,6 @@ $('.submit').on('click' , (event) => {
     const promise = $.ajax({
         url:`http://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&appid=e93b94d22c396d0199209e2c2b28fd6a`,
     });
-
-    let dateArr = [];
 
     promise.then(
         (data)=>{
