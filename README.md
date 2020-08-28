@@ -10,6 +10,7 @@ An application that generates games and activities based on the next five days w
 - sticky nav bar
 - not quite a tooltip, but a tag to new site
 ### Approach Taken
+- wireframing 
 - layout in html
 - establish css classes and id's
     - create my input field and button
@@ -21,6 +22,7 @@ An application that generates games and activities based on the next five days w
         - originally going to be a loop but due to the way the API is structured including hourly forcast, this made things tricky when using a loop
 - create the nav bar
 ### Unsolved Problems
+- github sheets and github recognizing jquery 
 - Not so much a problem, but a goal would be to make this DRY
 ### Improvements For Later
 - More complex UI such as a drag and drop or filter list
