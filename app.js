@@ -14,7 +14,7 @@ $('.submit').on('click' , (event) => {
     console.log(zipCode);
     
     const promise = $.ajax({
-        url:`http://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&appid=e93b94d22c396d0199209e2c2b28fd6a`,
+        url:`https://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&appid=e93b94d22c396d0199209e2c2b28fd6a`,
     });
 
     promise.then(
