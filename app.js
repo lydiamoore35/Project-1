@@ -47,16 +47,20 @@ $('.submit').on('click' , (event) => {
                 let feelsLike2
                 fahrenheit2 = Math.floor(eval(data.list[9].main.temp*9/5-459.67));
                 date = data.list[9].dt_txt;
-                feelsLike2 = Math.floor(eval(data.list[9].main.feels_like*9/5-459.67));
-                    $('.day2').css('display' , 'inline');
-                    $('<div>').text(`The temperature feels like ${feelsLike2}ºF`).prependTo('.day2');
-                    $('<div>').text(`${data.list[9].dt_txt} Today's temperature is ${fahrenheit2}ºF`).prependTo($('.day2'));
-                        if(fahrenheit2 >= 70){
-                        $('#hotGames2').css('display' , 'inline');
-                        }
-                        else{
-                            $('#coldGames2').css('display' , 'inline');
-                        }
+                console.log(date);
+                newDate = date.substring(5, date.length -9);
+                console.log(newDate);
+                console.log((newDate =`${newDate}-${new Date().getFullYear()}`));
+                    feelsLike2 = Math.floor(eval(data.list[9].main.feels_like*9/5-459.67));
+                        $('.day2').css('display' , 'inline');
+                        $('<div>').text(`The temperature feels like ${feelsLike2}ºF`).prependTo('.day2');
+                        $('<div>').text(`${data.list[9].dt_txt} Today's temperature is ${fahrenheit2}ºF`).prependTo($('.day2'));
+                            if(fahrenheit2 >= 70){
+                            $('#hotGames2').css('display' , 'inline');
+                            }
+                            else{
+                                $('#coldGames2').css('display' , 'inline');
+                            }
 
                 let fahrenheit3 
                 let feelsLike3
