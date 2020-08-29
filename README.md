@@ -3,7 +3,7 @@
 Lydia Moore's WeatherWize app: (https://lydiamoore35.github.io/Project-1/)
 
 ## WeatherWize: 
-An application that generates games and activities based on the next five day weather forcast. Clicking on each activitiy will load further intruction through a referenced web page for that specific game.
+An application that generates games and activities based on the next five day weather forcast. Clicking on each activitiy will load further instruction through a referenced web page for that specific game.
 ### Technologies Used
 - OpenWeather API and selected the 5 day forcast based on zipcode
 - 3 pieces of info from the API
